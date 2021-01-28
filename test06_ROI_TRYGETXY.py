@@ -22,10 +22,10 @@ def draw_circle(event,x,y,flags,param):
 
 
 
-cv2.namedWindow('image')
-cv2.setMouseCallback('image',draw_circle)
+cv2.namedWindow('three points and esc')
+cv2.setMouseCallback('three points and esc',draw_circle)
 while(1):
-    cv2.imshow('image',img)
+    cv2.imshow('three points and esc',img)
     if cv2.waitKey(20)&0xFF==27: #按esc停止
         break
 
@@ -40,7 +40,10 @@ yy.append(yy[1]-yy[0]+yy[2])
 print(xx,yy)
 img1[yy[2]:yy[3],xx[2]:xx[3]]=roi
 
-
+# cv2.namedWindow('final', cv2.WINDOW_NORMAL)
+# cv2.imshow('final',img1)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 
 
