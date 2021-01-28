@@ -25,6 +25,10 @@ plt.show()
 
 
 
+
+
+
+
 # cv2.WINDOW_NORMAL就可調整視窗大小，但無法等比例調整
 # cv2.namedWindow('title_test', cv2.WINDOW_NORMAL)
 
