@@ -1,3 +1,6 @@
+# TRY 用滑鼠標點
+# 標原兩點 第三下點新圖左上 之後按ESC
+
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
@@ -16,7 +19,7 @@ xx=[]
 yy=[]
 
 def draw_circle(event,x,y,flags,param):
-    if event==cv2.EVENT_LBUTTONDOWN: #左鍵按兩下
+    if event==cv2.EVENT_LBUTTONDOWN: #按左鍵
         xx.append(x)
         yy.append(y)
 
