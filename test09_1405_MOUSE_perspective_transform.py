@@ -7,6 +7,8 @@ def savexy(event,x,y,flags,param):
     global pts1
     global i
     if event==cv2.EVENT_LBUTTONDBLCLK:
+        # 把點標記綠色圈圈
+        cv2.circle(img,(x,y),3,(0,255,0),3)
         print(x,y)
         pts1[i]=[x,y]
         i+=1
@@ -19,7 +21,7 @@ cv2.namedWindow('image')
 cv2.setMouseCallback('image',savexy)
 while(1):
     cv2.imshow('image',img)
-    if cv2.waitKey(20)&0xFF==27 or i>3:
+    if cv2.waitKey(20)&0xFF==27 or i>3:  #四個點點完就關掉 可以不用按ESC
         break
 cv2.destroyAllWindows()
 M=cv2.getPerspectiveTransform(pts1,pts2)
